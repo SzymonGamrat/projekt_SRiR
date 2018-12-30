@@ -1,0 +1,8 @@
+source ./bin/activate
+pip install Pyro4
+export PYRO_FLAME_ENABLED=true
+pyro4-flameserver
+<skopiowac host:port z serwera>
+<otworzyc nowa konsole>
+<w nowej konsoli otworzyc client.py i wkleic host:port>
+
