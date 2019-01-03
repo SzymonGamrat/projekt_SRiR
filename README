@@ -37,9 +37,10 @@ Nastepnie nalezy wlaczyc drugi terminal, na ktorym wlaczymy klienta, uzywalem py
 
 	python3 client.py
 
-nastepnie wklejamy adres oraz port servera np.
+nastepnie wklejamy adres oraz port servera np. (numer portu zostanie wypisany przez uruchomiony serwer)
 
 	localhost:41493
+
 
 gdzie local hosta mozemy zamienic na ip dla sieci uzywajac polecenia:
 
