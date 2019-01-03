@@ -1,8 +1,48 @@
-source ./bin/activate
-pip install Pyro4
-export PYRO_FLAME_ENABLED=true
-pyro4-flameserver
-<skopiowac host:port z serwera>
-<otworzyc nowa konsole>
-<w nowej konsoli otworzyc client.py i wkleic host:port>
+Najpierw zaczynamy od instalowania wirtualnego srodowiska, jezeli w ogole go nie ma najpierw uzywamy polecenia:
+
+	sudo apt-get install virtualenv
+
+Nastepnie nalezy stworzyc folder, w ktorym utworzymy wirtualne srodowisko z wersja pythona, ktora bedziemy chcieli uzywac przy pracy z tym programem. W tym celu sluzy do tego polecenie:
+
+	virtualenv --python=/usr/bin/python<wersja> --no-site-packages 		<nazwa_folderu_w_ktorym_utworzymy_srodowisko>
+
+
+Aby zapobiec pojawianiu sie ewenetualnych bledow najlepszym rozwiazaniem bedzie przekopiowanie plikow z repozytorium do folderu, w ktorym zostalo zainstalowane wirtualne srodowisko. 
+
+Nastepnie nalezy aktywowac wirtualne srodowisko robimy to poleceniem:
+
+	source <nazwa_folderu_w_ktorym_utworzono_wirtualne_srodowisko>/bin/activate
+
+Aby deaktywowac srodowisko wpisujemy w terminalu:
+
+	deactivate
+
+Nastepne polecenia najlepiej aktywowac po aktywacji srodowiska:
+
+instalujemy framework Pyro:
+	pip install Pyro4
+
+
+zmiana zmiennej srodowiskowej tak by mozna bylo odpalic "flame"
+
+	export PYRO_FLAME_ENABLED=true
+
+po zmianie wpisujemy:
+
+	pyro4-flameserver
+
+zostanie wyswietlona informacja o tym ze serwer dziala oraz jego adres oraz numer portu.
+
+Nastepnie nalezy wlaczyc drugi terminal, na ktorym wlaczymy klienta, uzywalem pythona 3 wiec... :
+
+	python3 client.py
+
+nastepnie wklejamy adres oraz port servera np.
+
+	localhost:41493
+
+gdzie local hosta mozemy zamienic na ip dla sieci uzywajac polecenia:
+
+	ifconfig
+
 

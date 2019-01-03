@@ -4,6 +4,6 @@
 
 
 def doSomething(name, number):
-    print("This text is printedjjj from a module whose code was uploaded by the client:")
+    print("This text is printed from a module whose code was uploaded by the client:")
     print("  Hello, my name is {0} and my number is {1}.".format(name, number))
-    return 999
+    return "zaladowano na serwer"
