@@ -39,7 +39,7 @@ class Rmi():
 		self.zmienne()
 		filesource = open(self.src_file, 'rb').read()
 		#wylacznie zaladowanie kodu na serwer
-		flame.sendfile(dest_name, filesource)
+		flame.sendfile(self.dest_name, filesource)
 
 	def moduly(self):
 		self.zmienne()
